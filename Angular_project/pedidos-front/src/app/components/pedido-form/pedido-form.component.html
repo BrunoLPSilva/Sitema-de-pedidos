@@ -1,0 +1,23 @@
+<form (ngSubmit)="criarPedido()" #pedidoForm="ngForm">
+  <label>Cliente:</label>
+  <input type="text" name="cliente" [(ngModel)]="cliente" required />
+
+  <div *ngFor="let item of itens; let i = index">
+    <label>Produto:</label>
+    <input type="text" [(ngModel)]="item.nomeProduto" name="produto{{i}}" required />
+
+    <label>Quantidade:</label>
+    <input type="number" [(ngModel)]="item.quantidade" name="quantidade{{i}}" required />
+
+    <label>Preço Unitário:</label>
+    <input type="number" [(ngModel)]="item.precoUnitario" name="preco{{i}}" required />
+
+    <button type="button" (click)="adicionarItem()">Adicionar Item</button>
+    <button type="button" (click)="removerItem(i)">Remover</button>
+  </div>
+
+  <button type="submit">Criar Pedido</button>
+  <button class="btn-return" (click)="irParaHome()">Voltar</button>
+
+
+</form>

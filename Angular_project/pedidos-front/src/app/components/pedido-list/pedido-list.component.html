@@ -1,0 +1,36 @@
+<div class="d-flex align-items-center justify-content-between mb-3 px-3">
+  <div>
+    <label>Status:</label>
+    <select [(ngModel)]="statusFiltro" (change)="filtrarPedidos()">
+      <option value="">Todos</option>
+      <option value="Pendente">Pendente</option>
+      <option value="Processado">Processado</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary" [routerLink]="['/criar']">
+    Criar Novo Pedido
+  </button>
+</div>
+
+
+
+<ul>
+
+  <li class="pedido-header d-flex gap-3 px-3 py-2 border-bottom fw-bold bg-light">
+    <div class="flex-fill text-center">ID</div>
+    <div class="flex-fill text-center">Cliente</div>
+    <div class="flex-fill text-center">Total</div>
+    <div class="flex-fill text-center">Status</div>
+  </li>
+
+  <li *ngFor="let pedido of pedidosFiltrados" class="pedido-item d-flex gap-3 px-3 py-2 align-items-center border-bottom">
+    <div class="flex-fill text-center">{{pedido.id}}</div>
+    <div class="flex-fill text-center">{{pedido.cliente}}</div>
+    <div class="flex-fill text-center">{{calcularTotal(pedido)}}</div>
+    <div class="flex-fill text-center">{{pedido.status}}</div>
+    <div> <i class="bi bi-pencil edit-icon flex-fill text-center" (click)="editarPedido(pedido)"></i></div>
+
+
+  </li>
+</ul>

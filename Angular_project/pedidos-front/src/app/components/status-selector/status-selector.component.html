@@ -1,0 +1,5 @@
+<label for="statusSelect">Status:</label>
+<select id="statusSelect" [(ngModel)]="status" (change)="statusSelecionado.emit(status)" class="select-status">
+  <option value="Pendente">Pendente</option>
+  <option value="Processado">Processado</option>
+</select>

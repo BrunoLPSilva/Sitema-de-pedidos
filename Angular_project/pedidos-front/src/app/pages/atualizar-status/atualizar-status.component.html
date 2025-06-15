@@ -1,0 +1,15 @@
+<div class="status-container">
+
+
+  <h2 class="titulo-status">Atualizar Status</h2>
+
+  <label for="idPedido">ID do Pedido:</label>
+  <input type="number" id="idPedido" [(ngModel)]="idPedido" class="input-status" />
+
+  <app-status-selector [status]="novoStatus" (statusSelecionado)="novoStatus = $event"></app-status-selector>
+  <div>
+    <button class="btn btn-success btn-custom" (click)="atualizarStatus()">Atualizar</button>
+    <button class="btn btn-primary btn-custom ms-2" (click)="voltarParaHome()">← Voltar</button>
+  </div>
+
+</div>

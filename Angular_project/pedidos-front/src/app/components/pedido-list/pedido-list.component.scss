@@ -1,0 +1,42 @@
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  width: 200px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* boa prática para resetar margem padrão */
+}
+
+ul li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+  color: #444;
+  transition: background-color 0.3s ease;
+  cursor: pointer; /* opcional, deixa visual que pode ser clicável */
+}
+
+ul li:hover {
+  background-color: #f1f1f1;
+}
+.pedido-header {
+  background-color: #f1f1f1;
+}
+
