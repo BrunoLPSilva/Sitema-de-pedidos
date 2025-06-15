@@ -1,0 +1,23 @@
+# .NET build
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS / VS Code
+.vs/
+.vscode/
+
+# Angular
+node_modules/
+dist/
+.env
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
